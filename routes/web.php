@@ -16,3 +16,7 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register.store');
 Route::post('/login', [AuthController::class, 'login'])->name('login.attempt');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+use App\Http\Controllers\BerandaController;
+
+Route::get('/', [BerandaController::class, 'index'])->name('beranda');
